@@ -1,0 +1,22 @@
+{
+  "name": "zaxxx/pp",
+  "config": {
+    "platform": {
+      "php": "7.1.0"
+    }
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "require": {
+    "php": "~7.1",
+    "tracy/tracy": "^2.7",
+    "nette/di": "^3.0",
+    "doctrine/orm": "^2.6",
+    "nette/application": "^3.0",
+    "guzzlehttp/guzzle": "^6.3",
+    "latte/latte": "^2.5"
+  }
+}
