@@ -4,6 +4,11 @@
       "class": "\\Nette\\DI\\Container",
       "method": "getByType",
       "position": 0
+    },
+    {
+      "class": "\\PHPUnit\\Framework\\TestCase",
+      "method": "createMock",
+      "position": 0
     }
   ]
 }

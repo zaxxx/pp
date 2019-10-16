@@ -81,6 +81,7 @@ class Client
                 'page' => $page,
                 'limit' => self::SHOPS_LIMIT,
             ]);
+
             $response = $this->request('GET', '/shops?' . $query);
 
             $data = json_decode($response->getBody()->getContents(), true);

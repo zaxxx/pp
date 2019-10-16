@@ -10,7 +10,7 @@ use PlnaPenezenka\Api\Shops\Shop;
 
 class ShopArrayTransformerTest extends TestCase
 {
-    public function testTransform(): void
+    public function testTransformerCreatesShop(): void
     {
         $data = [
             'id' => 1,

@@ -9,7 +9,7 @@ use PlnaPenezenka\Api\Shops\Category;
 
 class CategoryArrayTransformerTest extends TestCase
 {
-    public function testTransform(): void
+    public function testTransformerCreatesCategory(): void
     {
         $data = [
             'id' => 1,

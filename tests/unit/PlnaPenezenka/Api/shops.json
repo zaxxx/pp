@@ -1,0 +1,17 @@
+{
+  "list": [
+    {
+      "id": 123,
+      "category_id": 234,
+      "name": "Tchibo",
+      "title": "Tchibo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue diam ornare laoreet egestas. Cras lobortis consequat lectus, sed malesuada ante dignissim vitae.",
+      "image_url": "https://www.plnapenezenka.cz/foo/bar/baz.png",
+      "link": "https://www.plnapenezenka.cz/obchody/tchibo-cz",
+      "slug": "tchibo-cz",
+      "is_favorite": false,
+      "created_at": "2016-02-12T15:35:57+01:00",
+      "popularity": 8.67
+    }
+  ]
+}
