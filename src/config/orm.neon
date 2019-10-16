@@ -1,0 +1,10 @@
+parameters:
+    orm:
+        paths:
+            - "src"
+        proxyDir: "temp/orm.proxy"
+services:
+    - PlnaPenezenka\Orm\EntityManagerFactory(%orm.paths%, %orm.proxyDir%, %devMode%)
+    orm.entityManager:
+        class: Doctrine\ORM\EntityManager
+        factory: @PlnaPenezenka\Orm\EntityManagerFactory::create()

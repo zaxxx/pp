@@ -17,6 +17,7 @@
     "doctrine/orm": "^2.6",
     "nette/application": "^3.0",
     "guzzlehttp/guzzle": "^6.3",
-    "latte/latte": "^2.5"
+    "latte/latte": "^2.5",
+    "symfony/console": "^3.4"
   }
 }

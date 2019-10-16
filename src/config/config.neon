@@ -1,5 +1,7 @@
 includes:
-    - config.local.neon
+    - console.neon
+    - db.neon
+    - orm.neon
 parameters:
     devMode: false
     pp-api:
