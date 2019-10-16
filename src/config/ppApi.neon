@@ -1,0 +1,8 @@
+parameters:
+    ppApi:
+        username: zax.drummer@gmail.com
+        password: br3aECVMmG9m2
+        apiUrl: "https://api.plnapenezenka.cz"
+services:
+    ppApi.guzzleClient: GuzzleHttp\Client(["base_uri" => %ppApi.apiUrl%])
+    ppApi.client: PlnaPenezenka\Api\Client(%ppApi.username%, %ppApi.password%, %ppApi.guzzleClient%)
