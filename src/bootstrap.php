@@ -16,7 +16,12 @@ Debugger::$strictMode = true;
 $containerLoader = new ContainerLoader(__DIR__ . '/../temp/cache', $devMode);
 $class = $containerLoader->load(function (Compiler $compiler) use ($devMode) {
     $compiler->loadConfig(__DIR__ . '/config/config.neon');
-    $compiler->addConfig(['parameters' => ['devMode' => $devMode]]);
+    $compiler->addConfig([
+        'parameters' => [
+            'devMode' => $devMode,
+            'srcDir' => __DIR__,
+        ],
+    ]);
 }, 'container');
 
 /** @var Container $container */

@@ -1,8 +1,8 @@
 parameters:
     orm:
         paths:
-            - "src"
-        proxyDir: "temp/orm.proxy"
+            - "%srcDir%/PlnaPenezenka"
+        proxyDir: "%srcDir%/../temp/orm.proxy"
 services:
     - PlnaPenezenka\Orm\EntityManagerFactory(%orm.paths%, %orm.proxyDir%, %devMode%)
     orm.entityManager:

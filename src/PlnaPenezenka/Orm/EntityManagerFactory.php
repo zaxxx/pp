@@ -46,6 +46,6 @@ class EntityManagerFactory
 
     private function createConfiguration(): Configuration
     {
-        return Setup::createAnnotationMetadataConfiguration($this->paths, $this->devMode, $this->proxyDir);
+        return Setup::createAnnotationMetadataConfiguration($this->paths, $this->devMode, $this->proxyDir, null, false);
     }
 }
