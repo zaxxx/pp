@@ -2,7 +2,7 @@ parameters:
     db:
         dsn: "mysql:host=localhost;dbname=pp"
         username: root
-        password: terra
+        password: root
 services:
     pdo:
         factory: PDO(%db.dsn%, %db.username%, %db.password%)

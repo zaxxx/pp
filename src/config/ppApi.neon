@@ -1,7 +1,7 @@
 parameters:
     ppApi:
-        username: zax.drummer@gmail.com
-        password: br3aECVMmG9m2
+        username: username@goes.here
+        password: password.goes.here
         apiUrl: "https://api.plnapenezenka.cz/"
         guzzleConfig:
             base_uri: %ppApi.apiUrl%
