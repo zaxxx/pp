@@ -1,10 +1,8 @@
-extensions:
-    nette.application: Nette\Bridges\ApplicationDI\ApplicationExtension
-    nette.http: Nette\Bridges\HttpDI\HttpExtension
-nette.application:
-    debugger: %devMode%
+application:
+    mapping:
+        *: ['PlnaPenezenka\UI', '*Module', '*Presenter']
 services:
-    - PlnaPenezenka\UI\RouterFactory()
-    ui.router:
+    - PlnaPenezenka\UI\RouterFactory(%basePath%)
+    routing.router:
         class: Nette\Application\IRouter
         factory: @PlnaPenezenka\UI\RouterFactory::create()

@@ -6,8 +6,7 @@ includes:
     - shops.neon
     - shopsApiSync.neon
     - ui.neon
+    - config.local.neon
 parameters:
     devMode: false
-    pp-api:
-        username: zax.drummer@gmail.com
-        password: br3aECVMmG9m2
+    basePath: ''

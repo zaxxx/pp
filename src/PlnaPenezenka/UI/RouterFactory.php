@@ -19,17 +19,15 @@ class RouterFactory
     {
         $router = new RouteList();
 
-        $router->addRoute($this->prefix . '/[<page \d+>]', [
-            'module' => 'Front',
-            'presenter' => 'Default',
+        $router->addRoute($this->prefix . '/obchod/<shop>', [
+            'presenter' => 'Front:Shop',
             'action' => 'default',
-            'page' => 1,
         ]);
 
-        $router->addRoute($this->prefix . '/<shop>', [
-            'module' => 'Front',
-            'presenter' => 'Shop',
+        $router->addRoute($this->prefix . '/[<page \d+>]', [
+            'presenter' => 'Front:Default',
             'action' => 'default',
+            'page' => 1,
         ]);
 
         return $router;

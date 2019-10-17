@@ -10,4 +10,13 @@ interface ShopRepository
     public function getById(int $id): ?Shop;
 
     public function getByPpApiId(int $ppApiId): ?Shop;
+
+    /**
+     * @param int $page
+     * @param int $limit
+     * @return Shop[]
+     */
+    public function paginate(int $page, int $limit): array;
+
+    public function countShops(): int;
 }

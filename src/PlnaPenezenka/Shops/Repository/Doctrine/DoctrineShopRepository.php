@@ -40,4 +40,19 @@ class DoctrineShopRepository implements ShopRepository
 
         return null;
     }
+
+    public function paginate(int $page, int $limit): array
+    {
+        return $this->entityManager->getRepository(Shop::class)
+            ->findBy([], null, $limit, $page * $limit);
+    }
+
+    public function countShops(): int
+    {
+        $builder = $this->entityManager->createQueryBuilder()
+            ->select('COUNT(s.id) AS count_shops')
+            ->from(Shop::class, 's');
+
+        return (int)$builder->getQuery()->getSingleScalarResult();
+    }
 }

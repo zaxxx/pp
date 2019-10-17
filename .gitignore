@@ -2,3 +2,4 @@
 .php_cs.cache
 vendor
 src/config/dev.neon
+src/config/config.local.neon

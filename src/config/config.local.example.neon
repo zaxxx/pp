@@ -1,0 +1,9 @@
+parameters:
+    devMode: true
+    basePath: '/path-to-project'
+    ppApi:
+        username: username@goes.here
+        password: password.goes.here
+    db:
+        username: username@goes.here
+        password: password.goes.here

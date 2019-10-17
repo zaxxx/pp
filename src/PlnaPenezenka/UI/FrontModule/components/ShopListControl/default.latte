@@ -1,0 +1,12 @@
+<div class="list-group">
+    {foreach $shops as $shop}
+        <div class="list-group-item">
+            <img src="{$shop[image_url]}" class="shop-img">
+            <h2><a href="{plink Shop:default, shop => $shop[slug]}">{$shop[name]}</a></h2>
+            <p><em>{$shop[category]}</em> .. popularita: {$shop[popularity]}</p>
+            <a class="btn btn-success btn-sm" href="{$shop[link]}" target="_blank">Přejít do obchodu</a>
+            <div class="clearfix"></div>
+        </div>
+    {/foreach}
+</div>
+

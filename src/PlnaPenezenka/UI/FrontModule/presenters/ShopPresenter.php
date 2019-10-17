@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PlnaPenezenka\UI\FrontModule\Presenters;
+namespace PlnaPenezenka\UI\FrontModule;
 
 use Nette\Application\UI\Presenter;
 
