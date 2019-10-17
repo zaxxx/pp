@@ -41,6 +41,19 @@ class DoctrineShopRepository implements ShopRepository
         return null;
     }
 
+    public function getBySlug(string $slug): ?Shop
+    {
+        $entity = $this->entityManager->getRepository(Shop::class)->findOneBy([
+            'slug' => $slug,
+        ]);
+
+        if ($entity instanceof Shop) {
+            return $entity;
+        }
+
+        return null;
+    }
+
     public function paginate(int $page, int $limit): array
     {
         return $this->entityManager->getRepository(Shop::class)

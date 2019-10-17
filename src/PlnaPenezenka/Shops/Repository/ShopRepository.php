@@ -11,6 +11,8 @@ interface ShopRepository
 
     public function getByPpApiId(int $ppApiId): ?Shop;
 
+    public function getBySlug(string $slug): ?Shop;
+
     /**
      * @param int $page
      * @param int $limit
