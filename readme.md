@@ -22,13 +22,18 @@ be `/pp/www`. If it's running at `http://localhost`, then it should be empty str
 
 Create database schema from entities:
 -------------------------------------
-`php www/index.php orm:schema-tool:create --force`
+`php www/index.php orm:schema-tool:create`
 
 Enable debug mode:
 ------------------
 `touch src/config/dev.neon`
 
-Run the tests
--------------
+Run the tests:
+--------------
 
 `./vendor/bin/phpunit`
+
+Download shops from API:
+------------------------
+
+`php www/index.php pp:api:sync-shops`
