@@ -5,3 +5,4 @@ services:
         setup:
             - Doctrine\ORM\Tools\Console\ConsoleRunner::addCommands(@self)
             - @self::getHelperSet()::set(@Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper, "em")
+            - add(@PlnaPenezenka\Shops\ApiSync\Console\SyncShopsCommand)

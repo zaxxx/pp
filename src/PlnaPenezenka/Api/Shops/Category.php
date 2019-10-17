@@ -18,9 +18,6 @@ class Category
     private $description;
 
     /** @var string */
-    private $imageUrl;
-
-    /** @var string */
     private $link;
 
     /** @var string */
@@ -67,16 +64,6 @@ class Category
     public function setDescription(string $description): void
     {
         $this->description = $description;
-    }
-
-    public function getImageUrl(): string
-    {
-        return $this->imageUrl;
-    }
-
-    public function setImageUrl(string $imageUrl): void
-    {
-        $this->imageUrl = $imageUrl;
     }
 
     public function getLink(): string

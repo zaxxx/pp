@@ -16,7 +16,6 @@ class CategoryArrayTransformerTest extends TestCase
             'parent_id' => null,
             'title' => 'foo',
             'description' => 'bar',
-            'image_url' => 'abc.jpg',
             'link' => 'https://google.com',
             'slug' => 'foo',
             'shops_count' => 1,
@@ -30,7 +29,6 @@ class CategoryArrayTransformerTest extends TestCase
         self::assertEquals($data['parent_id'], $category->getParentId());
         self::assertEquals($data['title'], $category->getTitle());
         self::assertEquals($data['description'], $category->getDescription());
-        self::assertEquals($data['image_url'], $category->getImageUrl());
         self::assertEquals($data['link'], $category->getLink());
         self::assertEquals($data['slug'], $category->getSlug());
         self::assertEquals($data['shops_count'], $category->getShopsCount());

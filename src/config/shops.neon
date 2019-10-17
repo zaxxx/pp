@@ -1,0 +1,3 @@
+services:
+    - PlnaPenezenka\Shops\Repository\Doctrine\DoctrineCategoryRepository
+    - PlnaPenezenka\Shops\Repository\Doctrine\DoctrineShopRepository

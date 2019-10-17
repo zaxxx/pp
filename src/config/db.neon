@@ -4,4 +4,7 @@ parameters:
         username: root
         password: terra
 services:
-    pdo: PDO(%db.dsn%, %db.username%, %db.password%)
+    pdo:
+        factory: PDO(%db.dsn%, %db.username%, %db.password%)
+        setup:
+            - exec("set names utf8")

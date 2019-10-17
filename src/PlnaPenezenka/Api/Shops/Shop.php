@@ -10,7 +10,7 @@ class Shop
     /** @var int */
     private $id;
 
-    /** @var int */
+    /** @var int|null */
     private $categoryId;
 
     /** @var string */
@@ -50,12 +50,12 @@ class Shop
         $this->id = $id;
     }
 
-    public function getCategoryId(): int
+    public function getCategoryId(): ?int
     {
         return $this->categoryId;
     }
 
-    public function setCategoryId(int $categoryId): void
+    public function setCategoryId(?int $categoryId): void
     {
         $this->categoryId = $categoryId;
     }

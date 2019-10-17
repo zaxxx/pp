@@ -27,7 +27,7 @@ class Shop
     private $ppApiId;
 
     /**
-     * @var Category
+     * @var Category|null
      * @ORM\ManyToOne(targetEntity="Category", inversedBy="shops")
      */
     private $category;
@@ -46,7 +46,7 @@ class Shop
 
     /**
      * @var string
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="text")
      */
     private $description;
 
@@ -101,12 +101,12 @@ class Shop
         $this->ppApiId = $ppApiId;
     }
 
-    public function getCategory(): Category
+    public function getCategory(): ?Category
     {
         return $this->category;
     }
 
-    public function setCategory(Category $category): void
+    public function setCategory(?Category $category): void
     {
         $this->category = $category;
     }

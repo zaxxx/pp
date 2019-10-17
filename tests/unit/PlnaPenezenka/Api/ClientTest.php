@@ -22,13 +22,13 @@ class ClientTest extends TestCase
             ->willReturnOnConsecutiveCalls(
                 new ReturnCallback(function (string $method, string $url, array $options = []) {
                     self::assertEquals('GET', $method);
-                    self::assertEquals('/shops?page=0&limit=20', $url);
+                    self::assertEquals('/shops?page=1&limit=20', $url);
 
                     return new Response(200, [], file_get_contents(__DIR__ . '/shops.json'));
                 }),
                 new ReturnCallback(function (string $method, string $url, array $options = []) {
                     self::assertEquals('GET', $method);
-                    self::assertEquals('/shops?page=1&limit=20', $url);
+                    self::assertEquals('/shops?page=2&limit=20', $url);
 
                     return new Response(200, [], '');
                 })

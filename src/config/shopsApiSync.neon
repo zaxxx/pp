@@ -1,0 +1,6 @@
+services:
+    - PlnaPenezenka\Shops\ApiSync\ApiSyncService
+    - PlnaPenezenka\Shops\ApiSync\DataTransformer\ApiCategoryTransformer
+    - PlnaPenezenka\Shops\ApiSync\DataTransformer\ApiShopTransformer
+    - PlnaPenezenka\Shops\ApiSync\Doctrine\DoctrineApiSyncStorage
+    - PlnaPenezenka\Shops\ApiSync\Console\SyncShopsCommand

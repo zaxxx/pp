@@ -27,7 +27,6 @@ class ApiCategoryTransformer
         $category->setPpApiId($apiCategory->getId());
         $category->setTitle($apiCategory->getTitle());
         $category->setDescription($apiCategory->getDescription());
-        $category->setImageUrl($apiCategory->getImageUrl());
         $category->setLink($apiCategory->getLink());
         $category->setSlug($apiCategory->getSlug());
         $category->setShopsCount($apiCategory->getShopsCount());

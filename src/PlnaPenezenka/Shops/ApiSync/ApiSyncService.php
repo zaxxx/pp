@@ -54,23 +54,32 @@ class ApiSyncService
         try {
             $this->client->authenticate();
 
-            foreach ($this->client->categories() as $apiCategory) {
-                $category = $this->apiCategoryTransformer->transform($apiCategory);
-                $this->storage->saveCategory($category);
-                $this->output->writeln("Saved category {$category->getPpApiId()}");
-            }
-
-            $this->storage->flush();
-
-            foreach ($this->client->shops() as $apiShop) {
-                $shop = $this->apiShopTransformer->transform($apiShop);
-                $this->storage->saveShop($shop);
-                $this->output->writeln("Saved shop {$shop->getPpApiId()}");
-            }
-
-            $this->storage->flush();
+            $this->saveCategories();
+            $this->saveShops();
         } catch (ClientException $e) {
             throw new ApiSyncException($e->getMessage(), $e->getCode(), $e);
         }
+    }
+
+    private function saveCategories(): void
+    {
+        foreach ($this->client->categories() as $apiCategory) {
+            $category = $this->apiCategoryTransformer->transform($apiCategory);
+            $this->storage->saveCategory($category);
+            $this->output->writeln("Saved category {$category->getPpApiId()}");
+        }
+
+        $this->storage->flush();
+    }
+
+    private function saveShops(): void
+    {
+        foreach ($this->client->shops() as $apiShop) {
+            $shop = $this->apiShopTransformer->transform($apiShop);
+            $this->storage->saveShop($shop);
+            $this->output->writeln("Saved shop {$shop->getPpApiId()}");
+        }
+
+        $this->storage->flush();
     }
 }

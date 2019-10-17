@@ -75,7 +75,7 @@ class Client
      */
     public function shops(): Generator
     {
-        $page = 0;
+        $page = 1;
         do {
             $query = http_build_query([
                 'page' => $page,
@@ -122,6 +122,10 @@ class Client
      */
     private function request(string $method, string $url, array $options = []): ResponseInterface
     {
+        if ($this->authToken !== null) {
+            $options['headers'] = ['Authorization' => $this->authToken];
+        }
+
         try {
             return $this->client->request($method, $url, $options);
         } catch (TransferException $e) {

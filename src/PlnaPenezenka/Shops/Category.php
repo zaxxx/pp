@@ -47,15 +47,9 @@ class Category
 
     /**
      * @var string
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="text")
      */
     private $description;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string", name="image_url")
-     */
-    private $imageUrl;
 
     /**
      * @var string
@@ -130,16 +124,6 @@ class Category
     public function setDescription(string $description): void
     {
         $this->description = $description;
-    }
-
-    public function getImageUrl(): string
-    {
-        return $this->imageUrl;
-    }
-
-    public function setImageUrl(string $imageUrl): void
-    {
-        $this->imageUrl = $imageUrl;
     }
 
     public function getLink(): string

@@ -12,16 +12,16 @@ class ShopArrayTransformer
     {
         $shop = new Shop();
         $shop->setId($data['id']);
-        $shop->setCategoryId($data['category_id']);
-        $shop->setName($data['name']);
-        $shop->setTitle($data['title']);
-        $shop->setDescription($data['description']);
-        $shop->setImageUrl($data['image_url']);
-        $shop->setLink($data['link']);
-        $shop->setSlug($data['slug']);
-        $shop->setIsFavorite($data['is_favorite']);
+        $shop->setCategoryId($data['category_id'][0] ?? null);
+        $shop->setName($data['name'] ?? '');
+        $shop->setTitle($data['title'] ?? '');
+        $shop->setDescription($data['description'] ?? '');
+        $shop->setImageUrl($data['image_url'] ?? '');
+        $shop->setLink($data['link'] ?? '');
+        $shop->setSlug($data['slug'] ?? '');
+        $shop->setIsFavorite($data['is_favorite'] ?? false);
         $shop->setCreatedAt(new DateTimeImmutable($data['created_at']));
-        $shop->setPopularity($data['popularity']);
+        $shop->setPopularity((float)$data['popularity']);
 
         return $shop;
     }

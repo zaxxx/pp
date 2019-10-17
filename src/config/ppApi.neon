@@ -2,7 +2,12 @@ parameters:
     ppApi:
         username: zax.drummer@gmail.com
         password: br3aECVMmG9m2
-        apiUrl: "https://api.plnapenezenka.cz"
+        apiUrl: "https://api.plnapenezenka.cz/"
+        guzzleConfig:
+            base_uri: %ppApi.apiUrl%
+            verify: false
 services:
-    ppApi.guzzleClient: GuzzleHttp\Client(["base_uri" => %ppApi.apiUrl%])
-    ppApi.client: PlnaPenezenka\Api\Client(%ppApi.username%, %ppApi.password%, %ppApi.guzzleClient%)
+    ppApi.guzzleClient: GuzzleHttp\Client(%ppApi.guzzleConfig%)
+    - PlnaPenezenka\Api\Client(%ppApi.username%, %ppApi.password%, @ppApi.guzzleClient)
+    - PlnaPenezenka\Api\DataTransformer\CategoryArrayTransformer
+    - PlnaPenezenka\Api\DataTransformer\ShopArrayTransformer

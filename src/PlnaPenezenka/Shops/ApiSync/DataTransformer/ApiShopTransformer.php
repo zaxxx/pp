@@ -25,11 +25,13 @@ class ApiShopTransformer
     public function transform(ApiShop $apiShop): Shop
     {
         $shop = $this->shopRepository->getByPpApiId($apiShop->getId()) ?? new Shop();
-        $category = $this->categoryRepository->getByPpApiId($apiShop->getCategoryId());
 
-        if ($category !== null) {
-            $shop->setCategory($category);
+        $category = null;
+        if ($apiShop->getCategoryId() !== null) {
+            $category = $this->categoryRepository->getByPpApiId($apiShop->getCategoryId());
         }
+
+        $shop->setCategory($category);
         $shop->setPpApiId($apiShop->getId());
         $shop->setName($apiShop->getName());
         $shop->setTitle($apiShop->getTitle());

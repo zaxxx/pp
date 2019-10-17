@@ -2,6 +2,9 @@ includes:
     - console.neon
     - db.neon
     - orm.neon
+    - ppApi.neon
+    - shops.neon
+    - shopsApiSync.neon
 parameters:
     devMode: false
     pp-api:
