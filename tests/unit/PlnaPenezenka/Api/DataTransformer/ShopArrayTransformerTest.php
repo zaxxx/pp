@@ -14,7 +14,7 @@ class ShopArrayTransformerTest extends TestCase
     {
         $data = [
             'id' => 1,
-            'category_id' => 2,
+            'category_id' => [2],
             'name' => 'foo',
             'title' => 'bar',
             'description' => 'baz',
@@ -31,7 +31,7 @@ class ShopArrayTransformerTest extends TestCase
         self::assertInstanceOf(Shop::class, $shop);
 
         self::assertEquals($data['id'], $shop->getId());
-        self::assertEquals($data['category_id'], $shop->getCategoryId());
+        self::assertEquals(2, $shop->getCategoryId());
         self::assertEquals($data['name'], $shop->getName());
         self::assertEquals($data['title'], $shop->getTitle());
         self::assertEquals($data['description'], $shop->getDescription());

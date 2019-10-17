@@ -5,6 +5,7 @@ includes:
     - ppApi.neon
     - shops.neon
     - shopsApiSync.neon
+    - ui.neon
 parameters:
     devMode: false
     pp-api:

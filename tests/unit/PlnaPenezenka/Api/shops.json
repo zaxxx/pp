@@ -2,7 +2,7 @@
   "list": [
     {
       "id": 123,
-      "category_id": 234,
+      "category_id": [234],
       "name": "Tchibo",
       "title": "Tchibo",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue diam ornare laoreet egestas. Cras lobortis consequat lectus, sed malesuada ante dignissim vitae.",
